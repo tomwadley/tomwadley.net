@@ -1,0 +1,5 @@
+name: TomWadley.net
+markdown: redcarpet
+pygments: true
+permalink: pretty
+exclude: ["Gemfile", "Gemfile.lock"]
