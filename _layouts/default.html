@@ -5,7 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{{ page.title }}</title>
+  <title>
+    {% if page.url != "/" %}
+    {{ page.title }} -
+    {% endif %}
+    TomWadley.net
+  </title>
 
   {% stylesheet main %}
 
@@ -16,10 +21,38 @@
 
 </head>
 <body>
+  <header>
+    <h1 class="title"><a href="/">{{ site.name }}</a></h1>
+  </header>
 
-  <h1 class="title"><a href="/">{{ site.name }}</a></h1>
+  <div id="all-content">
+    <div id="sidebar">
+      <aside class="bio">
+        <img src="http://placehold.it/150x150">
+        <p>I'm a full-stack software engineer from Melbourne based in London</p>
+      </aside>
 
-  {{ content }}
+      <nav>
+        <ul>
+          {% include page_li.html pageTitle="About Me" %}
+          {% include page_li.html pageTitle="Projects" %}
+          {% include page_li.html pageTitle="Miscellania" %}
+        </ul>
+      </nav>
 
+      <aside>
+        <p>Stack overflow</p>
+        <p>Github</p>
+        <p>Other social media?</p>
+        <p>Other badges? (FSF? EFF?)</p>
+      </aside>
+    </div>
+    <article>
+      {{ content }}
+    </article>
+  </div>
+
+  <footer>
+  </footer>
 </body>
 </html>
