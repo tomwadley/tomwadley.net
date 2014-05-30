@@ -21,35 +21,37 @@
 
 </head>
 <body>
-  <header>
-    <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-  </header>
+  <div id="header-wrapper">
+    <header>
+      <h1 class="title"><a href="/">{{ site.name }}</a></h1>
+    </header>
+  </div>
 
-  <div id="all-content">
-    <div id="sidebar">
-      <aside class="bio">
-        <img src="http://placehold.it/150x150">
-        <p>I'm a full-stack software engineer from Melbourne based in London</p>
-      </aside>
+  <div id="content-wrapper">
+    <section id="content">
+      <section id="sidebar">
+        <aside class="bio">
+          <img src="{{ site.url }}/images/tom-icon.jpg" width="150" height="150">
+          <p>I'm a software developer from Melbourne based in London</p>
+        </aside>
 
-      <nav>
-        <ul>
-          {% include page_li.html pageTitle="About Me" %}
-          {% include page_li.html pageTitle="Projects" %}
-          {% include page_li.html pageTitle="Miscellania" %}
-        </ul>
-      </nav>
+        <nav>
+          <ul>
+            {% include page_li.html id="index" %}
+            {% include page_li.html id="code" %}
+          </ul>
+        </nav>
 
-      <aside>
-        <p>Stack overflow</p>
-        <p>Github</p>
-        <p>Other social media?</p>
-        <p>Other badges? (FSF? EFF?)</p>
-      </aside>
-    </div>
-    <article>
-      {{ content }}
-    </article>
+        <aside id="badges">
+          {% include badges.html %}
+        </aside>
+      </section>
+      <section id="main-content">
+        <div id="page-{{ page.id }}">
+          {{ content }}
+        </div>
+      </section>
+    </section>
   </div>
 
   <footer>

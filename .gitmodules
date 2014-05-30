@@ -1,3 +1,6 @@
 [submodule "_vendors/bootstrap"]
 	path = _vendors/bootstrap
 	url = https://github.com/twbs/bootstrap.git
+[submodule "ship.js"]
+	path = ship.js
+	url = https://github.com/tomwadley/ship.js.git
