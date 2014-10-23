@@ -18,7 +18,7 @@ I enjoy,
 
 ### I've worked at...
 
-- **March 2014 - Present: Developer, [ThoughtWorks](http://thoughtworks.com/)**
+- **March 2014 - Present: Developer, [ThoughtWorks](http://www.thoughtworks.com/)**
 - November 2012 - March 2014: Software Engineer, [67 Bricks](http://www.67bricks.com/)
 - August 2009 - November 2010: Software Developer, [Hannan IT](http://hannanit.com.au/)
 - November 2008 - August 2009: Web Developer, [Friday Media](http://fridaymedia.com.au/)
@@ -33,7 +33,7 @@ I enjoy,
 ### Also...
 
 - I'm on [Github](https://github.com/tomwadley/)
-- I'm on [Stackoverflow](http://stackoverflow.com/users/613430/tom-wadley)
-- I am a member of the [Free Software Foundation](http://www.fsf.org/register_form?referrer=5340)
-- I am a member of the [EFF](http://www.eff.org/)
+- I'm on [Stackoverflow](https://stackoverflow.com/users/613430/tom-wadley)
+- I am a member of the [Free Software Foundation](https://www.fsf.org/register_form?referrer=5340)
+- I am a member of the [EFF](https://www.eff.org/)
 - **Please contact me via email:** [tom@tomwadley.net](mailto:tom@tomwadley.net)
