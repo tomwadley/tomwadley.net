@@ -36,4 +36,4 @@ I enjoy,
 - I'm on [Stackoverflow](https://stackoverflow.com/users/613430/tom-wadley)
 - I am a member of the [Free Software Foundation](https://www.fsf.org/register_form?referrer=5340)
 - I am a member of the [EFF](https://www.eff.org/)
-- **Please contact me via email:** [tom@tomwadley.net](mailto:tom@tomwadley.net)
+- **Please contact me via email:** [tom@tomwadley.net](mailto:tom@tomwadley.net) ([PGP](contact/))
