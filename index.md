@@ -19,7 +19,7 @@ I enjoy,
 ### I've worked at...
 
 - **March 2014 - Present: Developer, [ThoughtWorks](http://www.thoughtworks.com/)**
-- November 2012 - March 2014: Software Engineer, [67 Bricks](http://www.67bricks.com/)
+- November 2010 - March 2014: Software Engineer, [67 Bricks](http://www.67bricks.com/)
 - August 2009 - November 2010: Software Developer, [Hannan IT](http://hannanit.com.au/)
 - November 2008 - August 2009: Web Developer, [Friday Media](http://fridaymedia.com.au/)
 - 2008: Tutor, Computer Science Department, [RMIT University](http://www.rmit.edu.au/)
