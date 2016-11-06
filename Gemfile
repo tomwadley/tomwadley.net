@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
 gem "jekyll"
-gem "jekyll-assets"
-gem "less"
+gem "jekyll-less"
 gem "therubyracer"
+gem "redcarpet"
