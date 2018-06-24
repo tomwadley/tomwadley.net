@@ -4,11 +4,11 @@ id: contact
 title: Contact Me
 ---
 
-## Contact Me
+# Contact Me
 
 Please contact me via email: [tom@tomwadley.net](mailto:tom@tomwadley.net)
 
-### PGP
+## PGP
 
 My PGP key details (subkeys omitted):
 

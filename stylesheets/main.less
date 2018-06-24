@@ -3,22 +3,21 @@
 
 html { overflow-y: scroll; }
 
-#header-wrapper { background-color: #ccc; 
-  header { .container }
-  a { text-decoration: none; }
-  h1 { margin-top: 10px; }
+#header-wrapper { background-color: #eeeeee;
+  header { .container; padding-top: 10px; }
+  a { text-decoration: none; font-size: 36px; }
 }
 
-#content-wrapper { .container; 
-  #content { .row; 
+#content-wrapper { .container;
+  #content { .row;
     #sidebar { .make-sm-column(3); }
-    #main-content { .make-sm-column(9); }
+    #main-content { .make-sm-column(9); margin-bottom: 10px; }
   }
 }
 
 nav ul { .nav; .nav-pills; .nav-stacked; .center-block; width: 80%; }
 
-.bio { 
+.bio {
   img { .center-block; margin-top: 20px; .img-circle; }
   p { text-align: center; margin-top: 15px; margin-bottom: 30px; }
 }
@@ -29,15 +28,18 @@ nav ul { .nav; .nav-pills; .nav-stacked; .center-block; width: 80%; }
   span { color: black; margin-left: 10px; }
 }
 
-#page-code { 
+#page-code {
   article { .row;
     div:first-child:last-child { .make-sm-column(12); }
   }
   article { .row;
     div:first-child:not(:last-child) { .make-sm-column(9); }
-    div:last-child:not(:first-child) { .make-sm-column(3); .text-center; 
+    div:last-child:not(:first-child) { .make-sm-column(3); .text-center;
       img { .img-rounded; margin-top: 20px; }
     }
   }
-} 
+}
 
+#work-experience {
+    h3 { background: #eeeeee; padding: 10px; }
+}
