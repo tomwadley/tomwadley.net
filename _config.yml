@@ -1,5 +1,5 @@
 name: TomWadley.net
 markdown: redcarpet
 permalink: pretty
-exclude: ["Gemfile", "Gemfile.lock", "vendor"]
+exclude: ["Gemfile", "Gemfile.lock", "vendor", "Dockerfile", "Makefile", "README.md"]
 gems: ["jekyll-less"]
