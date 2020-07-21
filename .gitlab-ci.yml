@@ -1,0 +1,49 @@
+stages:
+  - build image
+  - build site
+  - deploy
+
+image: docker
+services:
+  - docker:dind
+
+variables:
+  ANSIBLE_IMAGE: $CI_REGISTRY/tom/tom-deployment:latest
+  GIT_SUBMODULE_STRATEGY: recursive
+
+before_script:
+  - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+
+build jekyll image:
+  stage: build image
+  script:
+    - docker pull $CI_REGISTRY_IMAGE:latest || true
+    - docker build --cache-from $CI_REGISTRY_IMAGE:latest -t $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA -t $CI_REGISTRY_IMAGE:latest .
+    - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
+    - docker push $CI_REGISTRY_IMAGE:latest
+
+build site:
+  stage: build site
+  script:
+    - docker run -v "$PWD":/src $CI_REGISTRY_IMAGE:latest jekyll build
+    - tar -czf site.tar.gz -C _site/ .
+  artifacts:
+    paths:
+      - site.tar.gz
+
+deploy:
+  stage: deploy
+  script:
+    - eval $(ssh-agent -a "$PWD"/ssh-agent-sock)
+    - echo "$SSH_PRIVATE_KEY" | ssh-add -
+    - >
+        docker run
+        --volume $SSH_AUTH_SOCK:/ssh-agent --env SSH_AUTH_SOCK=/ssh-agent
+        --volume $PWD/site.tar.gz:/site.tar.gz
+        $ANSIBLE_IMAGE
+        ansible-playbook -i inventory tomwadley.net.yml
+        --extra-vars "site_tarball=/site.tar.gz version_tag=$CI_COMMIT_SHA"
+  after_script:
+    - rm ssh-agent-sock
+  rules:
+    - when: manual
