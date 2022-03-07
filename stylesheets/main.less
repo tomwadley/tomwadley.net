@@ -1,17 +1,19 @@
 @import "../_vendors/bootstrap/less/bootstrap";
 @import "syntax";
 
+@brand-primary: #a25044;
+
 html { overflow-y: scroll; }
 
 #header-wrapper { background-color: #eeeeee;
-  header { .container; padding-top: 10px; }
+  header { .container; padding-top: 10px; padding-left: 35px }
   a { text-decoration: none; font-size: 36px; }
 }
 
 #content-wrapper { .container;
   #content { .row;
     #sidebar { .make-sm-column(3); }
-    #main-content { .make-sm-column(9); margin-bottom: 10px; }
+    #main-content { .make-sm-column(9); margin-bottom: 20px; }
   }
 }
 
